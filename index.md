@@ -2,6 +2,7 @@
 layout: null
 permalink: /
 ---
+{::nomarkdown}
 <!doctype html>
 <html lang="ko">
 <head>
@@ -23,3 +24,5 @@ permalink: /
 </head>
 <body><main><div class="brand">moa</div><h1>혼자 만드는 일에,<br>함께하는 영감.</h1><p>모아 커뮤니티 메인으로 이동합니다.</p><a href="https://moa-creator-community-1020.promrecord.chatgpt.site/">커뮤니티 바로 열기 →</a></main></body>
 </html>
+
+{:/nomarkdown}
