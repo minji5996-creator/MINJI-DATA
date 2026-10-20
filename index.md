@@ -6,14 +6,34 @@ permalink: /
 <!doctype html>
 <html lang="ko">
 <head>
+  <!-- Google tag (gtag.js): installed once; the destination records the page view. -->
+  <script async id="moa-google-tag" src="https://www.googletagmanager.com/gtag/js?id=G-HJK3Z0NNKG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HJK3Z0NNKG', { send_page_view: false });
+  </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>모아 MOA — 만드는 사람들의 커뮤니티</title>
   <meta name="description" content="AI·디자인·콘텐츠 제작자의 커뮤니티, 모아로 이동합니다.">
   <link rel="canonical" href="https://moa-creator-community-1020.promrecord.chatgpt.site/">
-  <meta http-equiv="refresh" content="0; url=https://moa-creator-community-1020.promrecord.chatgpt.site/">
+  <meta http-equiv="refresh" content="3; url=https://moa-creator-community-1020.promrecord.chatgpt.site/">
   <script>
-    window.location.replace('https://moa-creator-community-1020.promrecord.chatgpt.site/');
+    (function () {
+      var destination = 'https://moa-creator-community-1020.promrecord.chatgpt.site/';
+      var moved = false;
+      function goToCommunity() {
+        if (moved) return;
+        moved = true;
+        window.location.replace(destination);
+      }
+      window.setTimeout(goToCommunity, 2500);
+      document.getElementById('moa-google-tag').addEventListener('load', function () {
+        window.setTimeout(goToCommunity, 350);
+      }, { once: true });
+    })();
   </script>
   <style>
     body{margin:0;min-height:100vh;display:grid;place-items:center;background:#e9eddf;color:#25332d;font-family:system-ui,sans-serif}
