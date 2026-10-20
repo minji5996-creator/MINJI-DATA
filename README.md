@@ -5,7 +5,7 @@ AI, 디자인, 콘텐츠를 만드는 사람들이 작업과 경험을 나누는
 - 홈페이지: https://minji5996-creator.github.io/MINJI-DATA/ (모아 메인으로 자동 연결)
 - 라이브: https://moa-creator-community-1020.promrecord.chatgpt.site
 - GitHub: https://github.com/minji5996-creator/MINJI-DATA
-- 초기 공개 범위: 사이트 소유자 전용. 공개 범위는 Sites에서 관리합니다.
+- 공개 범위: 누구나 열람 가능. 글 작성·댓글·공감은 ChatGPT 로그인이 필요합니다.
 
 ## 기능
 
@@ -52,3 +52,7 @@ API 키·토큰·로컬 실행 상태는 저장소에 포함하지 않습니다.
 ## Google Analytics
 
 공통 app/layout.tsx의 head에 G-HJK3Z0NNKG Google 태그를 한 번만 설치했습니다. GitHub Pages 진입 페이지는 실제 커뮤니티로 이동하며 별도 page_view를 전송하지 않습니다. GA4 대시보드의 수신 여부는 별도 확인이 필요합니다.
+
+## Google Tag Manager
+
+GTM-MM8H5WDP를 커뮤니티 공통 head의 첫 스크립트와 body 바로 뒤 noscript에 설치했습니다. GitHub Pages 진입 페이지에도 동일하게 설치했습니다. 기존 GA4 직접 설치는 유지합니다. GTM에서 같은 GA4 측정 ID를 활성화할 때는 직접 설치와 이중 집계되지 않도록 함께 조정해야 합니다.

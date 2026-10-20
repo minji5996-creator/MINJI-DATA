@@ -7,19 +7,17 @@ export const metadata: Metadata = {
   icons: { icon: '/favicon.svg' },
 };
 
+// Raw head markup keeps the GTM bootstrap ahead of the existing Google tag.
+const analyticsHead = "<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer','GTM-MM8H5WDP');</script>\n<!-- End Google Tag Manager -->\n<!-- Google tag (gtag.js) -->\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-HJK3Z0NNKG\"></script>\n<script>\nwindow.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-HJK3Z0NNKG');\n</script>";
+
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="ko">
-      <head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-HJK3Z0NNKG" />
-        <script id="google-analytics" dangerouslySetInnerHTML={{ __html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-HJK3Z0NNKG');
-        ` }} />
-      </head>
-      <body>{children}</body>
+      <head dangerouslySetInnerHTML={{ __html: analyticsHead }} />
+      <body>
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MM8H5WDP" height="0" width="0" style={{ display: 'none', visibility: 'hidden' }} /></noscript>
+        {children}
+      </body>
     </html>
   );
 }
