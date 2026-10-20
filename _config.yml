@@ -1,0 +1,21 @@
+title: 모아 MOA
+description: AI·디자인·콘텐츠 제작자 커뮤니티
+exclude:
+  - app
+  - build
+  - components
+  - db
+  - drizzle
+  - examples
+  - hooks
+  - lib
+  - node_modules
+  - outputs
+  - public
+  - scripts
+  - vendor
+  - work
+  - package.json
+  - package-lock.json
+  - tsconfig.json
+  - README.md
