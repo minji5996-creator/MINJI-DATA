@@ -13,14 +13,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-MM8H5WDP');</script>
 <!-- End Google Tag Manager -->
-  <!-- Google tag (gtag.js): installed once; the destination records the page view. -->
-  <script async id="moa-google-tag" src="https://www.googletagmanager.com/gtag/js?id=G-HJK3Z0NNKG"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-HJK3Z0NNKG', { send_page_view: false });
-  </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>모아 MOA — 만드는 사람들의 커뮤니티</title>
@@ -36,10 +28,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         moved = true;
         window.location.replace(destination);
       }
-      window.setTimeout(goToCommunity, 2500);
-      document.getElementById('moa-google-tag').addEventListener('load', function () {
-        window.setTimeout(goToCommunity, 1200);
-      }, { once: true });
+      window.setTimeout(goToCommunity, 1200);
     })();
   </script>
   <style>

@@ -49,10 +49,12 @@ http://127.0.0.1:5173/ 에 접속합니다. 로컬 로그인은 개발용 모의
 
 API 키·토큰·로컬 실행 상태는 저장소에 포함하지 않습니다.
 
-## Google Analytics
+## Analytics: GTM 단일 관리
 
-공통 app/layout.tsx의 head에 G-HJK3Z0NNKG Google 태그를 한 번만 설치했습니다. GitHub Pages 진입 페이지는 실제 커뮤니티로 이동하며 별도 page_view를 전송하지 않습니다. GA4 대시보드의 수신 여부는 별도 확인이 필요합니다.
-
-## Google Tag Manager
-
-GTM-MM8H5WDP를 커뮤니티 공통 head의 첫 스크립트와 body 바로 뒤 noscript에 설치했습니다. GitHub Pages 진입 페이지에도 동일하게 설치했습니다. 기존 GA4 직접 설치는 유지합니다. GTM에서 같은 GA4 측정 ID를 활성화할 때는 직접 설치와 이중 집계되지 않도록 함께 조정해야 합니다.
+- GTM 컨테이너: GTM-MM8H5WDP
+- 현재 게시된 GTM의 GA4 측정 ID: G-7DYM9XBY66
+- 커뮤니티와 GitHub Pages 모두 GTM만 직접 설치합니다.
+- 이전 G-HJK3Z0NNKG 직접 설치를 제거했습니다. 기존 속성에 기록된 과거 데이터는 자동 이전되지 않습니다.
+- GA4 설정 및 이벤트는 게시된 GTM 컨테이너에서 관리합니다. GA4 직접 설치를 다시 추가하면 중복 전송될 수 있습니다.
+- GitHub Pages 진입 페이지와 이동 후 모아 페이지는 각각의 페이지 조회로 구분됩니다.
+- 브라우저의 수집 응답과 GA4 관리 화면의 처리 결과는 별도로 확인합니다.
